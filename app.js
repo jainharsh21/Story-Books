@@ -9,12 +9,7 @@ const connectDB = require("./config/db");
 dotenv.config({ path: "./config/config.env" });
 
 // connect to database
-
 connectDB();
-
-// Setting up handlebars
-app.engine(".hbs", exphbs({ defaultLayout: "main", extname: ".hbs" }));
-app.set("view engine", ".hbs");
 
 const app = express();
 
@@ -22,6 +17,14 @@ const app = express();
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+
+// Setting up handlebars
+app.engine(".hbs", exphbs({ defaultLayout: "main", extname: ".hbs" }));
+app.set("view engine", ".hbs");
+
+// Routes
+
+app.use("/", require("./routes/index"));
 
 const PORT = process.env.PORT || 5000;
 
