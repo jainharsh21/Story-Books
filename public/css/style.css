@@ -20,3 +20,7 @@ a {
   float: left;
   margin-right: 10px;
 }
+
+.img-small {
+  width: 180px;
+}
