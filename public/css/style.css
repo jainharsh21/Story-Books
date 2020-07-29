@@ -2,8 +2,16 @@ p {
   margin: 10px 0 !important;
 }
 
+a {
+  align-items: center !important;
+}
+
 .login-container {
   width: 400px;
   margin-top: 50px;
   text-align: center;
+}
+
+.fass-small {
+  font-size: 16px !important;
 }
