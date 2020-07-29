@@ -19,7 +19,9 @@
             </td>
             <td> {{formatDate createdAt 'Do MMMM YYYY,h:mm:ss a'}} </td>
             <td><span class="dash-status">{{status}}</span></td>
-            <td></td>
+            <td>
+                <a href="/stories/edit/{{_id}}" class="btn btn-float"><i class="fas fa-edit"></i></a>
+            </td>
         </tr>
         {{/each}}
     </tbody>
